@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Big Data</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<h1>Big Data</h1>
+<h2>Beispiel-Anwendung</h2>
+In dieser Beispiel-Anwendung soll das Konzept 'Data Mining' ein wenig veranschaulicht werden.
+Dazu wird ein Kaufhaus-Szenario modelliert. Die Daten werden an der Kasse erfasst und beinhalten
+Einkäufe und ihre Produkte. Der Kaufhausbesitzer interessiert sich für verschiedene Analysen, wie
+zum Beispiel die Frage, welche Artikel oft zusammen gekauft werden oder in welcher Menge einzelne Artikel gekauft
+werden. Diese Analyse-Ergebnisse kann er dann zum Beispiel verwenden, um Artikel besser zu gruppieren
+oder und das Kaufverhalten der Kunden nachzuvollziehen.
+<h3>Rohdaten</h3>
+<h4>Neuer Einkauf</h4>
+<div id='new-data'>
+</div>
+<button onclick='db.addItemForm()'>weiterer Artikel</button><br />
+<br />
+<button onclick='db.addPurchase()'>Einkauf abschließen</button>
+</div>
+<h4>Einkäufe</h4>
+<div id='data-container'></div>
+<div>
+<h3>Data Mining</h3>
+<h4>Korrelierende Artikel</h4>
+<h4>Meist verkaufte Artikel</h4>
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="scripts/database.js"></script>
+
+<script>
+$(window).load(function(){
+	db.addItemForm();
+});
+</script>
+
+</body>
+</html>
